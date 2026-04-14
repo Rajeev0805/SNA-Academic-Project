@@ -1,0 +1,20 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Classes
+ex:Person a owl:Class .
+ex:Publication a owl:Class .
+ex:Organization a owl:Class .
+
+# Object Properties
+ex:coAuthorOf a owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person .
+
+ex:authored a owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Publication .
+
+ex:worksFor a owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Organization .
